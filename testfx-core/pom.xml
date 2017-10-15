@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>testfx</artifactId>
+        <groupId>org.testfx</groupId>
+        <version>4.8.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>testfx-core</artifactId>
+    <packaging>bundle</packaging>
+    <name>testfx-core</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>3.2.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>org.testfx.api,
+                            org.testfx.matcher.base,
+                            org.testfx.matcher.control,
+                            org.testfx.robot,
+                            org.testfx.robot.impl,
+                            org.testfx.service.adapter,
+                            org.testfx.service.adapter.impl,
+                            org.testfx.service.finder,
+                            org.testfx.service.finder.impl,
+                            org.testfx.service.locator,
+                            org.testfx.service.locator.impl,
+                            org.testfx.service.query,
+                            org.testfx.service.query.impl,
+                            org.testfx.service.support,
+                            org.testfx.service.support.impl,
+                            org.testfx.toolkit,
+                            org.testfx.toolkit.impl,
+                            org.testfx.util,
+                            org.testfx.osgi.service
+                        </Export-Package>
+                        <Import-Package>javax.annotation; resolution:="optional",*</Import-Package>
+                        <Bundle-Activator>org.testfx.osgi.Activator</Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
