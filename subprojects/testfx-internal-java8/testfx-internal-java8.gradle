@@ -22,7 +22,7 @@ dependencies {
 
 jar {
     manifest {
-        instruction 'Fragment-Host', 'org.testfx.core'
+        instruction 'Fragment-Host', 'com.javatechnics.org.testfx.core'
         instruction 'Provide-Capability', 'org.testfx.osgi.versionadapter'
     }
 }
